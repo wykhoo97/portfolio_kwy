@@ -43,3 +43,7 @@ pygmentsUseClasses = true
 
   [markup.tableOfContents]
     ordered = true
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
