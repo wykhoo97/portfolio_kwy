@@ -1,0 +1,17 @@
+<div style="display: flex; justify-content: space-between; margin-bottom: 0.25em;">
+  <div>
+    <strong>
+      {{ if .IsNamedParams }}
+        {{ with .Get "url" }}
+          <a href="{{ . }}" target="_blank" rel="noopener">
+            {{ $.Get "title" }}
+          </a>
+        {{ end }}
+      {{ else }}
+        {{ .Get 0 }}
+      {{ end }}
+    </strong>
+  </div>
+  <div>{{ if .IsNamedParams }}{{ .Get "date" }}{{ else }}{{ .Get 1 }}{{ end }}</div>
+</div>
+<div>{{ .Inner }}</div>

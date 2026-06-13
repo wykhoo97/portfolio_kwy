@@ -1,0 +1,45 @@
+baseURL = 'https://example.org/'
+title = 'Khoo Wei Yang'
+theme = "etch"
+languageCode = 'en-us'
+enableInlineShortcodes = true
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[params]
+  description = "Khoo Wei Yang's portfolio"
+  copyright = "Copyright © 2026 All rights reserved"
+  dark = "auto"
+  highlight = true
+
+[menu]
+
+  [[menu.main]]
+    name = "CV"
+    url = "/cv"
+    weight = 1
+
+  [[menu.main]]
+    name = "Publications"
+    url = "/publication"
+    weight = 2
+
+  [[menu.main]]
+    name = "Portfolio"
+    url = "/portfolio"
+    weight = 3
+
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog"
+    weight = 4
+
+[permalinks]
+  posts = "/:title/"
+
+[markup.goldmark.renderer]
+  # Allow HTML in Markdown
+  unsafe = true
+
+  [markup.tableOfContents]
+    ordered = true
